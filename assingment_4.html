@@ -1,0 +1,31 @@
+<!DOCTYPEhtml>
+    <html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Async & Sync</title>
+    </head>
+
+    <body>
+        <script>
+            var promise = new Promise(function (resolve, reject) {
+                const x = "js promise";
+                const y = "js promise";
+                if (x === y) {
+                    resolve();
+                }
+                else {
+                    reject();
+                }
+            });
+            promise.then(function () {
+                document.write("Success, no error found");
+            }).catch(function () {
+                document.write("error");
+            })
+
+        </script>
+    </body>
+
+    </html>
